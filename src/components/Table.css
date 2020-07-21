@@ -1,0 +1,20 @@
+.table {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #f3f2f8;
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table td {
+  padding: 0.5rem;
+}
