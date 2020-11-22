@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  MenuItem,
-  Select,
-  FormControl,
-  Card,
-  CardContent,
-} from "@material-ui/core";
+import { MenuItem, Select, FormControl, Card, CardContent } from "@material-ui/core";
 import InfoBox from "./components/InfoBox";
 import Map from "./components/Map";
 import Table from "./components/Table";
@@ -59,10 +53,7 @@ function App() {
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
 
-    const url =
-      countryCode === "worldwide"
-        ? "https://disease.sh/v3/covid-19/all"
-        : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+    const url = countryCode === "worldwide" ? "https://disease.sh/v3/covid-19/all" : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
 
     await fetch(url)
       .then((res) => res.json())
@@ -79,14 +70,7 @@ function App() {
   };
 
   //*The state data we pass to other components via props
-  const {
-    cases,
-    todayCases,
-    recovered,
-    todayRecovered,
-    deaths,
-    todayDeaths,
-  } = countryInfo;
+  const { cases, todayCases, recovered, todayRecovered, deaths, todayDeaths } = countryInfo;
 
   return (
     <>
@@ -98,11 +82,7 @@ function App() {
               <h1>COVID-19 TRACKER</h1>
             </div>
             <FormControl className="app__dropdown">
-              <Select
-                variant="outlined"
-                value={country}
-                onChange={onCountryChange}
-              >
+              <Select variant="outlined" value={country} onChange={onCountryChange}>
                 <MenuItem value="worldwide">Worldwide</MenuItem>
                 {countries.map((c) => (
                   <MenuItem key={c.name} value={c.value}>
@@ -114,38 +94,12 @@ function App() {
           </div>
 
           <div className="app__stats">
-            <InfoBox
-              isOrange
-              active={casesType === "cases"}
-              onClick={(e) => setCasesType("cases")}
-              title="Cases"
-              cases={todayCases}
-              total={cases}
-            />
-            <InfoBox
-              isGreen
-              active={casesType === "recovered"}
-              onClick={(e) => setCasesType("recovered")}
-              title="Recovered"
-              cases={todayRecovered}
-              total={recovered}
-            />
-            <InfoBox
-              isRed
-              active={casesType === "deaths"}
-              onClick={(e) => setCasesType("deaths")}
-              title="Deaths"
-              cases={todayDeaths}
-              total={deaths}
-            />
+            <InfoBox isOrange active={casesType === "cases"} onClick={(e) => setCasesType("cases")} title="Cases" cases={todayCases} total={cases} />
+            <InfoBox isGreen active={casesType === "recovered"} onClick={(e) => setCasesType("recovered")} title="Recovered" cases={todayRecovered} total={recovered} />
+            <InfoBox isRed active={casesType === "deaths"} onClick={(e) => setCasesType("deaths")} title="Deaths" cases={todayDeaths} total={deaths} />
           </div>
 
-          <Map
-            center={mapCenter}
-            zoom={mapZoom}
-            countries={mapCountries}
-            casesType={casesType}
-          />
+          <Map center={mapCenter} zoom={mapZoom} countries={mapCountries} casesType={casesType} />
         </div>
         <Card className="app__right">
           <CardContent>
@@ -160,11 +114,8 @@ function App() {
       <div className="app__credit">
         <code>
           Made with 💖 by : &nbsp;
-          <a
-            style={{ textAlign: "center" }}
-            href="https://github.com/ahmedKing20/"
-          >
-            github
+          <a style={{ textAlign: "center" }} href="https://github.com/ahmedKing20/">
+            Ahmed - Balady (Please stay safe 🙏🏻🙏🏻 )
           </a>
         </code>
       </div>
