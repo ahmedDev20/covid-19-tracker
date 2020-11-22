@@ -1,6 +1,6 @@
 ## React Amazon Clone App
 
-![Overview](https://i.ibb.co/HgXVByF/covid-19-tracker.png)
+![Overview](https://i.imgur.com/s6bKOxC.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -12,7 +12,7 @@ This is a covid tracking app made with react js.
 
 - <a href="https://reactjs.org/">ReactJS</a> ⚛
 - <a href="https://firebase.google.com/docs/">Firebase BaaS</a> 🔥
-- <a href="https://disease.sh/">disease.sh API</a> 💳
+- <a href="https://disease.sh/">Disease.sh API</a> 🦠
 
 ### To get started :
 
