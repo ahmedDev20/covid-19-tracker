@@ -1,4 +1,4 @@
-## React Amazon Clone App
+## React Covid Tracker App
 
 ![Overview](https://i.imgur.com/s6bKOxC.png)
 
