@@ -114,7 +114,7 @@ function App() {
       <div className="app__credit">
         <code>
           Made with 💖 by : &nbsp;
-          <a style={{ textAlign: "center" }} href="https://github.com/ahmedKing20/">
+          <a style={{ textAlign: "center" }} href="https://github.com/ahmedDev20/">
             Ahmed - Balady (Please stay safe 🙏🏻🙏🏻 )
           </a>
         </code>
